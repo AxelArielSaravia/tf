@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>inSets: hacia la escencia convinatoria de la composición</title>
+<style>
+:root {
+    --c-primary: #f0dcdc;
+    --c-secondary: #353535;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    background: var(--c-primary);
+    color: var(--c-secondary);
+}
+a:link {
+    color
+}
+h1 {font-size: 3vw;}
+h2 {font-size: 2.5vw;}
+h3 {font-size: 2vw;}
+p {font-size: 2vw;}
+small {font-size: 1.5vw;}
+strong {font-weight: 900;}
+kbd {
+    border: 1px solid var(--c-secondary);
+    padding: 2px 4px;
+    border-radius: 5px;
+}
+[data-view] {
+    width: 100%;
+    height: 100vh;
+    background: var(--c-primary);
+    color: var(--c-secondary);
+}
+.center-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+[data-visible="0"] {
+    visibility: hidden !important;
+}
+.button:is(:hover,:focus) button {
+    visibility: visible;
+}
+.button:not(:hover,:focus) button {
+    visibility: hidden;
+}
+.button {
+    width: 100%;
+    position: fixed;
+}
+.button.top {
+    top: 0;
+}
+.button.bottom {
+    bottom: 0;
+}
+.button button {
+    width: 100%;
+    border: none;
+    cursor:pointer;
+    background: transparent;
+    color: var(--c-secondary);
+}
+.button button svg {
+    width: 50px;
+}
+</style>
+</head>
+<body style="overflow:hidden;">
+    <header data-view class="center-all">
+        <h1>inSets: hacia la escencia convinatoria de la composición</h1>
+        <h3>Axel Ariel Saravia</h3>
+        <h3>Departamento de Música, Facultad de Artes, Universidad Nacional de Córdoba</h3>
+        <h3>Trabajo Final de Lic. en Composición Musical</h3>
+        <h3>Dr. Sergio Patricio Poblete Barbero</h3>
+        <div style="
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            border: 2px solid var(--c-secondary);
+            border-radius: 5px;
+            padding: 0 1em;
+        ">
+            <p>Go up: <kbd>w</kbd> o <kbd>a</kbd> o <kbd>↑</kbd> o <kbd>←</kbd></p>
+            <p>Go down: <kbd>s</kbd> o <kbd>d</kbd> o <kbd>↓</kbd> o <kbd>→</kbd></p>
+            <p>Full screen: <kbd>m</kbd></p>
+        </div>
+    </header>
+    <section data-view class="center-all" aria-label="Obra" >
+        <h2>Donde encontrar la obra:</h2>
+        <a href="https://insets-music.web.app/" target="_blank" rel="noopener noreferrer">
+            <h2>https://insets-music.web.app</h2>
+        </a>
+        <img alt="qr" src="./qr.svg" style="max-height: 50%;">
+    </section>
+    <section data-view class="center-all" aria-label="Caracteristicas" >
+        <div style="padding: 5%;">
+            <h2>Se pueden intuir algunas características:</h2>
+            <ul>
+                <li>
+                    <p>Es una aplicación.</p>
+                </li>
+                <li>
+                    <p>Utiliza tecnología digital.</p>
+                </li>
+                <li>
+                    <p>Aleatoriedad o modelos de probabilidad para la selección.</p>
+                </li>
+                <li>
+                    <p>Hay una relación distinta a las convencionales de obra/usuario/instrumento.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section data-view class="center-all" aria-label="mis intenciones">
+        <h2>Mis intenciones para la obra</h2>
+        <ul style="padding-inline: 5%;">
+            <li><p>
+                Aleatoriedad, o distribución uniforme de probabilidades, en la
+                distribución y transformación de los elementos.
+            </p></li>
+            <li><p>
+                Una obra generativa/en movimiento, especialmente un sistema automatizado.
+            </p></li>
+        </ul>
+    </section>
+    <section data-view class="center-all" aria-label="Magnuson">
+        <div style="padding: 5%;">
+            <blockquote>
+                <p>
+                    "Lo que caracteriza a las nuevas prácticas  musicales del
+                    siglo XXI es un cierto desplazamiento del formato lineal
+                    al foco de la obra musical como sistema, una especie de
+                    invención, montaje o instalación, cuya materialidad,
+                    espacialidad y situacionalidad la separa de la noción
+                    abstracta de la música del siglo XX, expresada como notas
+                    generalizables en una partitura u, objetivamente capturar
+                    sonidos deseñados para una reproducción ubicua"
+                    <span>(pág. 234)</span>
+                </p>
+                <footer>
+                    <p style="font-size: 1.8vw;">
+                        -Tor Magnusson,
+                        <cite>Sonic Writing</cite>
+                        <time>2019</time>
+                    </p>
+                </footer>
+            </blockquote>
+            <small class="center-all" style="padding-block: 30px;">
+                <span>
+                    <strong>términos:</strong> música algoritmica y música generativa
+                </span>
+            </small>
+        </div>
+    </section>
+    <section data-view class="center-all" aria-label="Eco" >
+        <div style="padding: 5%;">
+            <h2 class="center-all">Umberto Eco</h2>
+            <p class="center-all">
+                <cite>Obra abierta 1962</cite>
+            </p>
+            <dl>
+                <dt><h3><strong>Apertura</strong></h3></dt>
+                <dd style="margin-bottom: 40px;"><p>
+                    La aceptación de distintas interpretaciones que pueden
+                    realizar los receptores de la obra de arte en el proceso 
+                    de comunicación.
+                </p></dd>
+                <dt><h3><strong>Obra abierta</strong></h3></dt>
+                <dd style="margin-bottom: 40px;"><p>
+                    La manera de caracterizar que toda obra esta sujeta a la <em>apertura</em>
+                </p></dd>
+                <dt><h3><strong>Obra en movimiento</strong></h3></dt>
+                <dd style="margin-bottom: 40px;"><p>
+                    Una de las propuestas practica para maximizar apertura.
+                    Se implementa a través de la "delegación" de decisiones sobre la obra.
+                </p></dd>
+            </dl>
+            <p class="center-all">
+                <span>Eco hace una explicación de la <em>apertura</em> en base a la <em>teoría de la comunicación</em></span>
+            </p>
+        </div>
+    </section>
+    <section data-view class="center-all" arial-label="comunicación">
+        <div style="padding:5%;">
+            <img
+                style="width:100%;"
+                alt="esquema de comunicación"
+                src="./comunication.png"
+            >
+            <dl>
+                <dt><h3><strong>Información</strong></h3></dt>
+                <dd style="margin-bottom: 40px;"><p>
+                    La medida de la libertad en la seleccion de un mensaje en un contexto dado.
+                </p></dd>
+            </dl>
+        </div>
+    </section>
+    <section data-view class="center-all" aria-label="mis aportes" >
+        <div style="padding:5%;">
+            <h2 class="center-all" style="margin-bottom:40px;">
+                "Hacia la escencia convinatoria de la composición"
+            </h2>
+            <dl>
+                <dt><h3><strong>Música Algorítmica</strong></h3></dt>
+                <dd style="margin-bottom: 40px;"><p>
+                    El término <em>música algorítmica</em> no tine sentido
+                    ya que toda obra de musica puede entenderse como algorítmica.
+                </p></dd>
+                <dt><h3><strong>Música Generativa</strong></h3></dt>
+                <dd style="margin-bottom: 40px;"><p>
+                    Obra generativa y obra abierta refieren a lo mismo:
+                    "una obra donde se ceden decisiones sobre la misma".
+                </p></dd>
+            </dl>
+        </div>
+    </section>
+    <section data-view class="center-all" aria-label="estrategias">
+        <div>
+            <h2>Estrategias en relación a los problemas comunicativos</h2>
+            <div style="position:relative;height:35vw;">
+                <p style="
+                    position:absolute;
+                    width:50%;
+                    padding:1.5vw;
+                    left:20%;
+                    border:0.2em solid var(--c-secondary);
+                    border-radius:3px;
+                ">
+                    Iteractividad directa con el usuario final (usuarios activos)
+                </p>
+                <p style="
+                    position:absolute;
+                    width:40%;
+                    padding:1.5vw;
+                    top:40%;
+                    border:0.2em solid var(--c-secondary);
+                    border-radius:3px;
+                ">
+                    El usuario incide en la distribución probabilística de los elementos
+                </p>
+                <p style="
+                    position:absolute;
+                    width:40%;
+                    padding:1.5vw;
+                    bottom:0;
+                    right:0;
+                    border:0.2em solid var(--c-secondary);
+                    border-radius:3px;
+                ">
+                    <strong>El usuario elige los materiales musicales</strong>
+                </p>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 48"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-arrow-up"
+                    style="
+                        transform:rotate(214deg);
+                        width:3vw;
+                        position:absolute;
+                        top:10vw;
+                        left:27vw
+                    "
+                >
+                    <line x1="12" y1="43" x2="12" y2="5"></line>
+                    <polyline points="5 12 12 5 19 12"></polyline>
+                </svg>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 115"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-arrow-up"
+                    style="
+                        transform:rotate(150deg);
+                        width:3vw;
+                        position:absolute;
+                        top:9.5vw;
+                        left:36vw
+                    "
+                >
+                    <line x1="12" y1="110" x2="12" y2="5"></line>
+                    <polyline points="5 12 12 5 19 12"></polyline>
+                </svg>
+            </div>
+        </div>
+    </section>
+    <section data-view class="center-all" aria-label="practica">
+        <h2>¿Cómo funciona la obra?</h2>
+        <p>La obra aplica un porcedimiento de mananera infinita.</p>
+        <div style="padding: 5%">
+            <h3>Este procedimiento consta de:</h3>
+            <p>
+                "ejecutar simultaneamente archivos de audio (los materiales) cada cierto tiempo".
+            </p>
+        </div>
+    </section>
+    <section data-view class="center-all" aria-label="grafico">
+        <img
+            alt="diagrama de flujo"
+            src="grafico.svg"
+            style="
+                height: 100%;
+                width: 90vw;
+            "
+        >
+    </section>
+    <section data-view class="center-all" aria-label="agradecimientos">
+        <h2 style="font-size:3vw">Gracias por venir</h2>
+        <a href="https://insets-music.web.app/" target="_blank" rel="noopener noreferrer">
+            <h2>https://insets-music.web.app</h2>
+        </a>
+        <img alt="qr" src="./qr.svg" style="max-height: 50%;">
+    </section>
+    <div class="button top center-all">
+        <button
+            id="button-up"
+            type="button"
+            data-visible="0"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-chevron-up"
+            >
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+        </button>
+    </div>
+    <div class="button bottom center-all">
+        <button
+            id="button-down"
+            type="button"
+            data-visible="1"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-chevron-down"
+            >
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </button>
+    </div>
+</body>
+<script>
+var DOMViews = document.querySelectorAll("[data-view]");
+var DOMButtonUp = document.getElementById("button-up");
+var DOMButtonDown = document.getElementById("button-down");
+var viewSelected = 0;
+
+function showDOMButtons() {
+    if (viewSelected === 0) {
+        DOMButtonUp.setAttribute("data-visible", "0");
+    } else {
+        DOMButtonUp.setAttribute("data-visible", "1");
+    }
+    if (viewSelected === DOMViews.length - 1) {
+        DOMButtonDown.setAttribute("data-visible", "0");
+    } else {
+        DOMButtonDown.setAttribute("data-visible", "1");
+    }
+}
+
+var fullscreen = false;
+
+document.addEventListener("keyup", function (e){
+    var key = e.key;
+    if (
+        key === "s"
+        || key === "d"
+        || key === "ArrowDown"
+        || key === "ArrowRight"
+    ) {
+        e.preventDefault();
+        if (viewSelected < DOMViews.length - 1) {
+            viewSelected += 1;
+            showDOMButtons();
+        }
+        DOMViews[viewSelected].scrollIntoView();
+    } else if (
+        key === "w"
+        || key === "a"
+        || key === "ArrowUp"
+        || key === "ArrowLeft"
+    ) {
+        e.preventDefault();
+        if (viewSelected > 0) {
+            viewSelected -= 1;
+            showDOMButtons();
+        }
+        DOMViews[viewSelected].scrollIntoView();
+    } else if (e.key === "m") {
+        document.body.requestFullscreen();
+    }
+});
+
+DOMButtonUp.addEventListener("click", function (e) {
+    if (viewSelected > 0) {
+        viewSelected -= 1;
+        DOMViews[viewSelected].scrollIntoView();
+        showDOMButtons();
+    }
+});
+
+DOMButtonDown.addEventListener("click", function (e) {
+    if (viewSelected < DOMViews.length) {
+        viewSelected += 1;
+        DOMViews[viewSelected].scrollIntoView();
+        showDOMButtons();
+    }
+});
+</script>
+</html>
